@@ -178,7 +178,15 @@ header nav {
   top: 130%;
   left: 0%;
 }
-
+.meal img {
+  height: 80px;
+  width: 80px;
+  background-size: 80px;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  overflow: hidden;
+  margin: auto;
+}
 
 /******************** IDs ********************/
 #header-image {
@@ -393,7 +401,7 @@ header nav {
 #navbar nav {
   margin: auto 0;
 }
-#meal1 img {
+/* #meal1 img {
   height: 80px;
   width: 80px;
   background-size: 80px;
@@ -401,6 +409,6 @@ header nav {
   border-radius: 100%;
   overflow: hidden;
   margin: auto;
-}
+} */
 
 /******************** @media ********************/
