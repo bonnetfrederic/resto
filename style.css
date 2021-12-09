@@ -56,6 +56,37 @@ header nav {
   justify-content: center;
   align-items: center;
 }
+.discover {
+  height: 713px;
+  width: 50%;
+  margin: 0 auto;
+}
+.div-header {
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.div-header-title {
+  font-family: var(--ff-allura), cursive;
+  font-size: 2.2rem;
+  color: var(--cafe);
+  text-align: center;
+}
+.div-header-picto {
+  background: url(./assets/img/ic-plate-big.png) center;
+  background-size: 30px;
+  /* position: absolute;
+  top: 115px; */
+  height: 30px;
+  width: 30px;
+  color: white;
+  margin: 0 auto;
+}
+.div-header-nav {
+  width: 100%;
+}
 
 /******************** classes specs ********************/
 .nav-menu li {
@@ -70,6 +101,29 @@ header nav {
   margin: 0 12px;
   color: var(--lightgrey);
 }
+.div-header ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-family: var(--ff-poppins);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+}
+.div-header li {
+  position: relative;
+}
+.div-header li::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: var(--lightgrey);
+  top: 130%;
+  left: 0%;
+}
+
 
 /******************** IDs ********************/
 #header-image {
@@ -214,7 +268,7 @@ header nav {
   color: var(--darkgrey);
   text-align: center;
   font-family: var(--ff-roboto);
-  
+
 }
 #our-store-card-avatar {
   background: url(./assets/img/avatar-01.jpg) center/cover;
@@ -224,9 +278,6 @@ header nav {
   background-repeat: no-repeat;
   border-radius: 100%;
   overflow: hidden;
-}
-#our-store-card-author {
-
 }
 #our-store-card-author-l1 {
   font-family: var(--ff-roboto);
@@ -243,6 +294,20 @@ header nav {
 #our-store-image {
   background: url(./assets/img/store-01.jpg) center/cover;
   grid-area: img;
+}
+#middle {
+  background: var(--darkgrey);
+  min-height: 2365px;
+  z-index: -2;
+  position: relative;
+}
+#background-slider {
+  background: url(./assets/img/bg-menu-01.jpg) center/cover;
+  height: 540px;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 313px;
 }
 
 /******************** IDs specs ********************/
