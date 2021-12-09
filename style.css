@@ -142,6 +142,33 @@ header nav {
   grid-area: price;
   margin: auto;
 }
+.booking {
+  margin-top: 200px;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+    "hours resa"
+  ;
+  background: var(--white);
+  height: 450px;
+  width: 70%;
+  margin: 200px auto 50px auto;
+}
+.booking-container {
+  grid-area: hours;
+  background: #090909;
+}
+.booking-hours {
+  color: var(--white);
+  height: 410px;
+  margin: 20px;
+  border: 1px dashed #a6724556;
+  padding: 10px;
+}
+.booking-res {
+  grid-area: resa;
+}
 
 /******************** classes specs ********************/
 .nav-menu li {
@@ -395,6 +422,13 @@ header nav {
 }
 #meal8 {
   grid-area: meal8;
+}
+#booking-hours-icplate {
+  background: url(./assets/img/ic-plate.png) center;
+  background-size: 30px;
+  height: 30px;
+  width: 30px;
+  color: var(--lightgrey);
 }
 
 /******************** IDs specs ********************/
