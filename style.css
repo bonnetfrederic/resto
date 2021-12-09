@@ -91,6 +91,7 @@ header nav {
 .meals {
   background: #fbfaf6;
   margin-top: 40px;
+  padding-top: 30px 5px;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: repeat(4, 130px);
@@ -123,6 +124,19 @@ header nav {
   grid-area: txt;
   text-align: left;
   margin: auto 0;
+  padding: 0 2px;
+}
+.meal-title {
+  font-family: var(--ff-poppins);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.7rem;
+}
+.meal-ingredients {
+  font-family: var(--ff-roboto);
+  font-size: 0.9rem;
+  font-weight: lighter;
+  color: var(--darkgrey);
 }
 .meal-price {
   grid-area: price;
@@ -379,14 +393,14 @@ header nav {
 #navbar nav {
   margin: auto 0;
 }
-#meal1.meal-img {
-  background: url(./assets/img/dish-item-01.jpg) center/cover;
+#meal1 img {
   height: 80px;
   width: 80px;
   background-size: 80px;
   background-repeat: no-repeat;
   border-radius: 100%;
   overflow: hidden;
+  margin: auto;
 }
 
 /******************** @media ********************/
