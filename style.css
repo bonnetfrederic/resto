@@ -20,7 +20,6 @@
   --white: whitesmoke;
   --cafe: #a67245;
   --lightgrey: #bababc;
-  --medgrey: ;
   --darkgrey: #21201e;
   --drakestgrey: #161513;
   --black: #090909;
@@ -57,19 +56,18 @@ header nav {
   justify-content: center;
   align-items: center;
 }
-.allura {
-  font-family: var(--ff-allura), cursive;
-}
 
 /******************** classes specs ********************/
 .nav-menu li {
   padding: 5px 2%;
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   color: var(--lightgrey);
 }
 .nav-logos li {
-  padding: 7px;
+  font-size: 1rem;
+  /* padding: 7px; */
+  margin: 0 12px;
   color: var(--lightgrey);
 }
 
@@ -77,32 +75,34 @@ header nav {
 #header-image {
   z-index: -1;
   background: url(./assets/img/bg-slider-06.jpg) center/cover;
-  height: 500px;
+  height: 650px;
   width: 100%;
   margin: 0 auto;
+  background-size: 1650px;
 }
 #navbar {
   width: 80%;
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 15% 85%;
   grid-template-rows: 1fr;
   grid-template-areas: 
   "logo nav"
   ;
   margin: 0 10%;
   position:absolute;
-  top: 10px;
+  top: 15px;
   color: white;
 }
 #navbar-logo {
+  font-family: var(--ff-allura);
   grid-area: logo;
-  font-size: 2.2rem;
+  font-size: 2.6rem;
   margin: auto 0;
   color: var(--white);
 }
 #welcome-container {
   position: absolute;
-  top: 130px;
+  top: 200px;
   left: 50%;
   width: 50%;
   transform: translateX(-50%);
@@ -132,7 +132,7 @@ header nav {
 #welcome-title-l2 {
   font-family: var(--ff-poppins), sans-serif;
   text-transform: uppercase;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 600;
   position: absolute;
   top: 40px;
@@ -143,22 +143,111 @@ header nav {
   background: url(./assets/img/ic-plate-big.png) center;
   background-size: 30px;
   position: absolute;
-  top: 105px;
+  top: 115px;
   height: 30px;
   width: 30px;
   color: white;
-  /* overflow: hidden; */
 }
 #welcome-text {
   position: absolute;
-  top: 170px;
+  top: 175px;
   text-transform: uppercase;
   color: var(--lightgrey);
   font-family: var(--ff-roboto), sans-serif;
-  font-size: 0.7rem;
+  font-size: 1rem;
   letter-spacing: 2px;
+}
+#our-store {
+  height: 400px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+    "card img"
+  ;
+}
+#our-store-card-container {
+  margin: auto 0;
+  height: 100%;
+}
+#our-store-card {
+  border: 1px dashed #a6724556;
+  padding: 20px 3%;
+  height: 95%;
+  margin: 2%;
+  grid-area: card;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#our-store-card-title {
+  margin: 0 auto;
+}
+#our-store-card-title-l1 {
+  font-family: var(--ff-allura);
+  color: var(--cafe);
+  font-size: 2rem;
+  width: 160px;
+  text-align: center;
+  line-height: 20px;
+  margin: 0 auto;
+}
+#our-store-card-title-l2 {
+  font-family: var(--ff-poppins);
+  font-size: 1rem;
+  font-weight: 600;
+  width: 200px;
+  text-align: center;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: var(--black);
+}
+#our-store-card-picto {
+  background: url(./assets/img/ic-plate.png) center;
+  background-size: 30px;
+  height: 30px;
+  width: 30px;
+  color: var(--lightgrey);
+}
+#our-store-card-text {
+  color: var(--darkgrey);
+  text-align: center;
+  font-family: var(--ff-roboto);
+  
+}
+#our-store-card-avatar {
+  background: url(./assets/img/avatar-01.jpg) center/cover;
+  height: 80px;
+  width: 80px;
+  background-size: 80px;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  overflow: hidden;
+}
+#our-store-card-author {
+
+}
+#our-store-card-author-l1 {
+  font-family: var(--ff-roboto);
+  color: var(--black);
+  text-align: center;
+}
+#our-store-card-author-l2 {
+  font-family: var(--ff-roboto);
+  color: var(--lightgrey);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+#our-store-image {
+  background: url(./assets/img/store-01.jpg) center/cover;
+  grid-area: img;
 }
 
 /******************** IDs specs ********************/
+#navbar nav {
+  margin: auto 0;
+}
 
 /******************** @media ********************/
