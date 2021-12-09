@@ -1,15 +1,99 @@
 /******************** imports ********************/
+@font-face {
+  font-family: 'Allura';
+  src: url(./assets/fonts/Allura-Regular.ttf);
+}
+@font-face {
+  font-family: 'Poppins', sans-serif;
+  src: url(./assets/fonts/Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  src: url(./assets/fonts/Roboto-Light.ttf);
+}
 
 /******************** general ********************/
+:root {
+  --ff-allura: 'Allura', cursive;
+  --ff-poppins: 'Poppins', sans-serif;
+  --ff-roboto: 'Roboto', sans-serif;
+  --white: whitesmoke;
+  --cafe: #a67245;
+  --lightgrey: #bababc;
+  --medgrey: ;
+  --darkgrey: #21201e;
+  --drakestgrey: #161513;
+  --black: #090909;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  position: relative;
+}
+li {
+  list-style: none;
+}
 
 /******************** general specs ********************/
-
+header nav {
+  grid-area: nav;
+}
 
 /******************** classes ********************/
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.nav-logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.allura {
+  font-family: var(--ff-allura), cursive;
+}
 
 /******************** classes specs ********************/
+.nav-menu li {
+  padding: 2vh;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+}
+.nav-logos li {
+  padding: 7px;
+}
 
 /******************** IDs ********************/
+#header-image {
+  background: url(./assets/img/bg-slider-06.jpg) center/cover;
+  height: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+#navbar {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "logo nav"
+  ;
+  margin: 0 10%;
+  position:absolute;
+  top: 0;
+  color: white;
+}
+#navbar-logo {
+  grid-area: logo;
+  font-size: 2rem;
+  margin: auto 0;
+}
 
 /******************** IDs specs ********************/
 

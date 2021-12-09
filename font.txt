@@ -1,3 +1,7 @@
 Allura Regular
 Poppins Medium
 Roboto Light
+
+font-family: 'Allura', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
