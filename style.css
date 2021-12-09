@@ -17,7 +17,7 @@
   --ff-allura: 'Allura', cursive;
   --ff-poppins: 'Poppins', sans-serif;
   --ff-roboto: 'Roboto', sans-serif;
-  --white: whitesmoke;
+  --white: #eeeeee;
   --cafe: #a67245;
   --lightgrey: #bababc;
   --darkgrey: #21201e;
@@ -62,7 +62,8 @@ header nav {
   margin: 0 auto;
 }
 .div-header {
-  height: 140px;
+  padding-top: 50px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -76,16 +77,56 @@ header nav {
 }
 .div-header-picto {
   background: url(./assets/img/ic-plate-big.png) center;
-  background-size: 30px;
+  background-size: 25px;
   /* position: absolute;
   top: 115px; */
-  height: 30px;
-  width: 30px;
-  color: white;
+  height: 25px;
+  width: 25px;
+  color: var(--lightgrey);
   margin: 0 auto;
 }
 .div-header-nav {
   width: 100%;
+}
+.meals {
+  background: #fbfaf6;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: repeat(4, 130px);
+  grid-template-areas: 
+    "meal1 meal2"
+    "meal3 meal4"
+    "meal5 meal6"
+    "meal7 meal8"
+  ;
+}
+.meal {
+  height: 120px;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 30% 60% 10%;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+    "img txt price"
+  ;
+  border-bottom: 1px solid var(--lightgrey);
+  margin: 0 auto;
+}
+.meal-img {
+  grid-area: img;
+  height: 90px;
+  width: 90px;
+  margin: auto 0;
+}
+.meal-description {
+  grid-area: txt;
+  text-align: left;
+  margin: auto 0;
+}
+.meal-price {
+  grid-area: price;
+  margin: auto;
 }
 
 /******************** classes specs ********************/
@@ -227,7 +268,7 @@ header nav {
 #our-store-card {
   border: 1px dashed #a6724556;
   padding: 20px 3%;
-  height: 95%;
+  height: 93%;
   margin: 2%;
   grid-area: card;
   display: flex;
@@ -309,10 +350,43 @@ header nav {
   position: absolute;
   top: 313px;
 }
+#meal1 {
+  grid-area: meal1;
+}
+#meal2 {
+  grid-area: meal2;
+}
+#meal3 {
+  grid-area: meal3;
+}
+#meal4 {
+  grid-area: meal4;
+}
+#meal5 {
+  grid-area: meal5;
+}
+#meal6 {
+  grid-area: meal6;
+}
+#meal7 {
+  grid-area: meal7;
+}
+#meal8 {
+  grid-area: meal8;
+}
 
 /******************** IDs specs ********************/
 #navbar nav {
   margin: auto 0;
+}
+#meal1.meal-img {
+  background: url(./assets/img/dish-item-01.jpg) center/cover;
+  height: 80px;
+  width: 80px;
+  background-size: 80px;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  overflow: hidden;
 }
 
 /******************** @media ********************/
