@@ -58,7 +58,7 @@ header nav {
   align-items: center;
 }
 .discover {
-  min-height: 820px;
+  min-height: 900px;
   width: 50%;
   margin: 0 auto;
 }
@@ -88,12 +88,13 @@ header nav {
   width: 100%;
 }
 .meals {
+  height: 550px;
   background: #fbfaf6;
   margin-top: 40px;
-  padding-top: 30px 5px;
+  padding: 0px 5px 10px;
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: repeat(4, 130px);
+  grid-template-rows: repeat(4, 140px);
   grid-template-areas: 
     "meal1 meal2"
     "meal3 meal4"
@@ -102,7 +103,7 @@ header nav {
   ;
 }
 .meal {
-  height: 120px;
+  height: 100px;
   width: 80%;
   display: grid;
   grid-template-columns: 30% 60% 10%;
@@ -111,7 +112,7 @@ header nav {
     "img txt price"
   ;
   border-bottom: 1px solid var(--lightgrey);
-  margin: 0 auto;
+  margin: auto;
 }
 .meal-img {
   grid-area: img;
@@ -272,10 +273,12 @@ header nav {
   height: 80px;
   width: 80px;
   background-size: 80px;
-  background-repeat: no-repeat;
   border-radius: 100%;
   overflow: hidden;
-  margin: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .booking-res-form form {
   padding: 0 20px;
@@ -302,7 +305,8 @@ header nav {
 
 /************************* IDs *************************/
 #navbar {
-  min-height: 200px;
+  height: 100px;
+  padding-top: 40px;
   width: 80%;
   display: grid;
   grid-template-columns: 15% 85%;
@@ -323,32 +327,33 @@ header nav {
   padding-left: 30px;
 }
 #welcome-container {
-  height: 300px;
+  height: 280px;
   width: 50%;
-  margin: 220px auto;
+  margin: 100px auto;
 }
 #welcome {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  min-height: 300px;
+  height: 280px;
 }
 #welcome-title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  line-height: 40px;
 }
 #welcome-title-l1 {
   font-family: var(--ff-allura), cursive;
-  font-size: 4rem;
+  font-size: 3.6rem;
   color: var(--cafe);
 }
 #welcome-title-l2 {
   font-family: var(--ff-poppins), sans-serif;
   text-transform: uppercase;
-  font-size: 3.6rem;
+  font-size: 3rem;
   font-weight: 600;
   color: var(--white);
   letter-spacing: 6px;
@@ -462,7 +467,7 @@ header nav {
 }
 #background-slider {
   background: url(./assets/img/bg-menu-01.jpg) center/cover;
-  height: 540px;
+  height: 600px;
   width: 100%;
   z-index: -1;
   position: absolute;
