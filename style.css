@@ -1,4 +1,4 @@
-/******************** imports ********************/
+/************************* imports *************************/
 @font-face {
   font-family: 'Allura';
   src: url(./assets/fonts/Allura-Regular.ttf);
@@ -12,7 +12,7 @@
   src: url(./assets/fonts/Roboto-Light.ttf);
 }
 
-/******************** general ********************/
+/************************* general *************************/
 :root {
   --ff-allura: 'Allura', cursive;
   --ff-poppins: 'Poppins', sans-serif;
@@ -30,18 +30,19 @@
   box-sizing: border-box;
 }
 header {
-  position: relative;
+  background: url(./assets/img/bg-slider-06.jpg) center/cover;
+  min-height: 100vh;
 }
 li {
   list-style: none;
 }
 
-/******************** general specs ********************/
+/************************* general specs *************************/
 header nav {
   grid-area: nav;
 }
 
-/******************** classes ********************/
+/************************* classes *************************/
 .nav-menu {
   display: flex;
   flex-direction: row;
@@ -57,13 +58,13 @@ header nav {
   align-items: center;
 }
 .discover {
-  height: 713px;
+  min-height: 820px;
   width: 50%;
   margin: 0 auto;
 }
 .div-header {
-  padding-top: 50px;
-  height: 200px;
+  padding-top: 70px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -71,17 +72,15 @@ header nav {
 }
 .div-header-title {
   font-family: var(--ff-allura), cursive;
-  font-size: 2.2rem;
+  font-size: 3.2rem;
   color: var(--cafe);
   text-align: center;
 }
 .div-header-picto {
   background: url(./assets/img/ic-plate-big.png) center;
-  background-size: 25px;
-  /* position: absolute;
-  top: 115px; */
-  height: 25px;
-  width: 25px;
+  background-size: 30px;
+  height: 30px;
+  width: 30px;
   color: var(--lightgrey);
   margin: 0 auto;
 }
@@ -130,17 +129,21 @@ header nav {
   font-family: var(--ff-poppins);
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
 }
 .meal-ingredients {
   font-family: var(--ff-roboto);
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: lighter;
   color: var(--darkgrey);
 }
 .meal-price {
   grid-area: price;
   margin: auto;
+  color: var(--cafe);
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 .booking {
   margin-top: 200px;
@@ -151,7 +154,7 @@ header nav {
     "hours resa"
   ;
   background: var(--white);
-  height: 450px;
+  height: 600px;
   width: 70%;
   margin: 200px auto 50px auto;
 }
@@ -161,19 +164,27 @@ header nav {
 }
 .booking-hours {
   color: var(--white);
-  height: 410px;
+  height: 93%;
   margin: 20px;
   border: 1px dashed #a6724556;
   padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20% 15% 65%;
+  text-align: center;
+  align-items: center;
+}
+.booking-hours-details {
+  min-height: 230px;
 }
 .booking-res {
   grid-area: resa;
 }
 
-/******************** classes specs ********************/
+/************************* classes specs *************************/
 .nav-menu li {
   padding: 5px 2%;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   color: var(--lightgrey);
 }
@@ -190,7 +201,7 @@ header nav {
   align-items: center;
   font-family: var(--ff-poppins);
   color: var(--white);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 .div-header li {
@@ -215,16 +226,9 @@ header nav {
   margin: auto;
 }
 
-/******************** IDs ********************/
-#header-image {
-  z-index: -1;
-  background: url(./assets/img/bg-slider-06.jpg) center/cover;
-  height: 650px;
-  width: 100%;
-  margin: 0 auto;
-  background-size: 1650px;
-}
+/************************* IDs *************************/
 #navbar {
+  min-height: 200px;
   width: 80%;
   display: grid;
   grid-template-columns: 15% 85%;
@@ -233,76 +237,65 @@ header nav {
   "logo nav"
   ;
   margin: 0 10%;
-  position:absolute;
-  top: 15px;
   color: white;
 }
 #navbar-logo {
   font-family: var(--ff-allura);
   grid-area: logo;
-  font-size: 2.6rem;
+  font-weight: 600;
+  font-size: 4rem;
   margin: auto 0;
   color: var(--white);
+  padding-left: 30px;
 }
 #welcome-container {
-  position: absolute;
-  top: 200px;
-  left: 50%;
+  height: 300px;
   width: 50%;
-  transform: translateX(-50%);
+  margin: 220px auto;
 }
 #welcome {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  position: relative;
-  min-height: 200px;
+  min-height: 300px;
 }
 #welcome-title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: -10px;
-  width: 300px;
 }
 #welcome-title-l1 {
   font-family: var(--ff-allura), cursive;
-  font-size: 2.8rem;
+  font-size: 4rem;
   color: var(--cafe);
 }
 #welcome-title-l2 {
   font-family: var(--ff-poppins), sans-serif;
   text-transform: uppercase;
-  font-size: 2.4rem;
+  font-size: 3.6rem;
   font-weight: 600;
-  position: absolute;
-  top: 40px;
   color: var(--white);
   letter-spacing: 6px;
 }
 #welcome-logo {
   background: url(./assets/img/ic-plate-big.png) center;
   background-size: 30px;
-  position: absolute;
-  top: 115px;
   height: 30px;
   width: 30px;
   color: white;
 }
 #welcome-text {
-  position: absolute;
-  top: 175px;
   text-transform: uppercase;
   color: var(--lightgrey);
   font-family: var(--ff-roboto), sans-serif;
-  font-size: 1rem;
+  font-size: 1.3rem;
   letter-spacing: 2px;
+  text-align: center;
 }
 #our-store {
-  height: 400px;
+  height: 700px;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 1fr;
@@ -331,40 +324,40 @@ header nav {
 #our-store-card-title-l1 {
   font-family: var(--ff-allura);
   color: var(--cafe);
-  font-size: 2rem;
-  width: 160px;
+  font-size: 3rem;
+  /* width: 160px; */
   text-align: center;
-  line-height: 20px;
+  /* line-height: 20px; */
   margin: 0 auto;
 }
 #our-store-card-title-l2 {
   font-family: var(--ff-poppins);
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  width: 200px;
+  /* width: 200px; */
   text-align: center;
-  line-height: 20px;
+  /* line-height: 20px; */
   text-transform: uppercase;
   color: var(--black);
 }
 #our-store-card-picto {
   background: url(./assets/img/ic-plate.png) center;
-  background-size: 30px;
-  height: 30px;
-  width: 30px;
+  background-size: 40px;
+  height: 40px;
+  width: 40px;
   color: var(--lightgrey);
 }
 #our-store-card-text {
   color: var(--darkgrey);
   text-align: center;
   font-family: var(--ff-roboto);
-
+  font-size: 1.4rem;
 }
 #our-store-card-avatar {
   background: url(./assets/img/avatar-01.jpg) center/cover;
-  height: 80px;
-  width: 80px;
-  background-size: 80px;
+  height: 100px;
+  width: 100px;
+  background-size: 100px;
   background-repeat: no-repeat;
   border-radius: 100%;
   overflow: hidden;
@@ -373,13 +366,14 @@ header nav {
   font-family: var(--ff-roboto);
   color: var(--black);
   text-align: center;
+  font-size: 1.5rem;
 }
 #our-store-card-author-l2 {
   font-family: var(--ff-roboto);
   color: var(--lightgrey);
   text-align: center;
   text-transform: uppercase;
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
 #our-store-image {
   background: url(./assets/img/store-01.jpg) center/cover;
@@ -387,8 +381,8 @@ header nav {
 }
 #middle {
   background: var(--darkgrey);
-  min-height: 2365px;
-  z-index: -2;
+  min-height: 3000px;
+  z-index: -1;
   position: relative;
 }
 #background-slider {
@@ -397,7 +391,7 @@ header nav {
   width: 100%;
   z-index: -1;
   position: absolute;
-  top: 313px;
+  top: 400px;
 }
 #meal1 {
   grid-area: meal1;
@@ -425,24 +419,30 @@ header nav {
 }
 #booking-hours-icplate {
   background: url(./assets/img/ic-plate.png) center;
-  background-size: 30px;
-  height: 30px;
-  width: 30px;
+  background-size: 35px;
+  height: 35px;
+  width: 35px;
   color: var(--lightgrey);
+  margin: 0 auto;
+}
+#booking-hours-l1 {
+  font-family: var(--ff-allura);
+  color: var(--cafe);
+  text-align: center;
+  font-size: 2.8rem;
+}
+#booking-hours-l2 {
+  font-family: var(--ff-roboto);
+  color: var(--white);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
-/******************** IDs specs ********************/
+/************************* IDs specs *************************/
 #navbar nav {
   margin: auto 0;
 }
-/* #meal1 img {
-  height: 80px;
-  width: 80px;
-  background-size: 80px;
-  background-repeat: no-repeat;
-  border-radius: 100%;
-  overflow: hidden;
-  margin: auto;
-} */
 
-/******************** @media ********************/
+/************************* @media *************************/
