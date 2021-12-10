@@ -294,8 +294,15 @@ header nav {
   background: url(./assets/img/event-03.jpg) center/cover;
 
 }
-.event-square-image {
-  
+.event-text h3, .event-square-text h3 {
+  color: var(--darkgrey);
+  font-family: var(--ff-poppins);
+  font-size: 1.5rem;
+}
+.event-text h5, .event-square-text h5 {
+  color: var(--lightgrey);
+  font-family: var(--ff-roboto);
+  font-size: 1rem;
 }
 .event-square-text {
   background: var(--white);
