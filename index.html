@@ -204,38 +204,38 @@
       <div class="booking">
         <div class="booking-container">
           <div class="booking-hours">
-            <div>
+            <div class="booking-hours-title">
               <div id="booking-hours-l1">Time</div>
               <div id="booking-hours-l2">OPEN</div>
             </div>
             <div id="booking-hours-icplate"></div>
             <div class="booking-hours-details">
               <div>
-                <div>MONDAY - FRIDAY</div>
-                <div>
+                <div class="booking-hours-days">MONDAY - FRIDAY</div>
+                <div class="booking-hours-hours">
                   <span>7AM - 11AM (Breakfast)</span><br>
                   <span>11AM - 10PM (Lunch/Dinner)</span>
                 </div>
               </div>
               <div>
-                <div>SATURDAY / SUNDAY</div>
-                <div>
+                <div class="booking-hours-days">SATURDAY / SUNDAY</div>
+                <div class="booking-hours-hours">
                   <span>8AM - 1PM (Brunch)</span><br>
                   <span>1PM - 9PM (Lunch/Dinner)</span>
                 </div>
               </div>
               <div>
-                <div>+15 890 979 25 52</div>
+                <div class="booking-hours-days">+15 890 979 25 52</div>
               </div>
             </div>
           </div>
         </div>
         <div class="booking-res">
-          <div>
-            <span>Reservation</span><br>
-            <span>ONLINE BOOKING</span>
+          <div class="booking-res-title">
+            <span class="booking-res-title-l1">Reservation</span><br>
+            <span class="booking-res-title-l2">ONLINE BOOKING</span>
           </div>
-          <div>'ic-plate.png'</div>
+          <div class="booking-res-picto"></div>
           <div class="booking-res-form">
             <form action="">
               <select name="who" id="booking-people" required>
@@ -249,10 +249,10 @@
               <input 
                 type="time" id="booking-time"
                 min="09:00" max="18:00" required>
-              <input type="text" id="booking-name" required>
-              <input type="text" id="booking-phone" required>
-              <input type="text" id="booking-email" required>
-              <input type="submit" value="BOOK NOW">
+              <input type="text" id="booking-name" placeholder="Name" required>
+              <input type="text" id="booking-phone" placeholder="Phone" required>
+              <input type="text" id="booking-email" placeholder="Email" required>
+              <input type="submit" id="booking-button" value="BOOK NOW">
             </form>
           </div>
         </div>

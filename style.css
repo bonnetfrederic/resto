@@ -146,7 +146,7 @@ header nav {
   font-weight: 600;
 }
 .booking {
-  margin-top: 200px;
+  /* margin-top: 200px; */
   display: grid;
   grid-template-columns: 30% 70%;
   grid-template-rows: 1fr;
@@ -156,7 +156,7 @@ header nav {
   background: var(--white);
   height: 600px;
   width: 70%;
-  margin: 200px auto 50px auto;
+  margin: 300px auto 50px auto;
 }
 .booking-container {
   grid-area: hours;
@@ -174,12 +174,64 @@ header nav {
   text-align: center;
   align-items: center;
 }
+.booking-hours-title {
+  line-height: 30px;
+}
 .booking-hours-details {
-  min-height: 230px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.booking-hours-days {
+  font-family: var(--ff-poppins);
+  color: var(--cafe);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.booking-hours-hours {
+  font-family: var(--ff-roboto);
+  color: var(--lightgrey);
+  font-weight: lighter;
+  font-size: 1rem;
+  margin: 15px auto;
 }
 .booking-res {
   grid-area: resa;
+  padding: 60px 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 70px 300px;
+  grid-template-areas: 
+    "title"
+    "picto"
+    "form"
+  ;
 }
+.booking-res-title {
+  text-align: center;
+  line-height: 30px;
+}
+.booking-res-title-l1 {
+  font-family: var(--ff-allura);
+  color: var(--cafe);
+  font-size: 3rem;
+}
+.booking-res-title-l2 {
+  font-family: var(--ff-poppins);
+  color: var(--black);
+  font-weight: 600;
+  font-size: 2rem;
+}
+.booking-res-picto {
+  background: url(./assets/img/ic-plate.png) center;
+  background-size: 35px;
+  height: 35px;
+  width: 35px;
+  color: var(--lightgrey);
+  margin: 0 auto;
+}
+
 
 /************************* classes specs *************************/
 .nav-menu li {
@@ -224,6 +276,28 @@ header nav {
   border-radius: 100%;
   overflow: hidden;
   margin: auto;
+}
+.booking-res-form form {
+  padding: 0 20px;
+  height: 320px;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: 25% 25% 50%;
+  grid-template-areas: 
+    "people date time"
+    "name phone email"
+    "btn btn btn"
+    ;
+  gap: 2px 5%;
+}
+.booking-res-form select, .booking-res-form input {
+  height: 50px;
+  margin: auto 0;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  position: relative;
+  border-bottom: 1px solid var(--lightgrey);
 }
 
 /************************* IDs *************************/
@@ -320,6 +394,7 @@ header nav {
 }
 #our-store-card-title {
   margin: 0 auto;
+  line-height: 30px;
 }
 #our-store-card-title-l1 {
   font-family: var(--ff-allura);
@@ -438,6 +513,35 @@ header nav {
   text-transform: uppercase;
   font-size: 1.8rem;
   font-weight: 600;
+}
+#booking-people {
+  grid-area: people;
+}
+#booking-date {
+  grid-area: date;
+}
+#booking-time {
+  grid-area: time;
+}
+#booking-name {
+  grid-area: name;
+}
+#booking-phone {
+  grid-area: phone;
+}
+#booking-email {
+  grid-area: email;
+}
+#booking-button {
+  grid-area: btn;
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  width: 240px;
+  margin: 40px auto 0 auto;
 }
 
 /************************* IDs specs *************************/
