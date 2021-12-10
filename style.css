@@ -232,7 +232,77 @@ header nav {
   color: var(--lightgrey);
   margin: 0 auto;
 }
+.our-event {
+  width: 65%;
+  margin: 100px auto;
+}
+.our-event-title {
+  text-align: center;
+  line-height: 40px;
+}
+.our-event-title-l1 {
+  font-family: var(--ff-allura);
+  color: var(--cafe);
+  font-size: 3rem;
+}
+.our-event-title-l2 {
+  font-family: var(--ff-poppins);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 2rem;
+}
+.our-event-picto {
+  background: url(./assets/img/ic-plate.png) center;
+  background-size: 35px;
+  height: 35px;
+  width: 35px;
+  color: var(--lightgrey);
+  margin: 50px auto 50px;
+}
+.our-event-events {
+  height: 400px;
+  /* background: var(--white); */
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas: 
+    "rect1 square"
+    "rect2 square"
+  ;
+  gap: 20px;
+}
+.event-landscape {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+    "img txt"
+  ;
+}
+.event-image {
+  grid-area: img;
+  height: 200px;
+  width: 240px;
+}
+.event-text {
+  grid-area: txt;
+  background: var(--white);
+  padding: 15px;
+}
+.event-square {
+  grid-area: square;
+  background: url(./assets/img/event-03.jpg) center/cover;
 
+}
+.event-square-image {
+  
+}
+.event-square-text {
+  background: var(--white);
+  height: 90%;
+  width: 90%;
+  margin: 5% auto;
+}
 
 /************************* classes specs *************************/
 .nav-menu li {
@@ -547,6 +617,24 @@ header nav {
   font-size: 1.5rem;
   width: 240px;
   margin: 40px auto 0 auto;
+}
+#event-rect1 {
+  grid-area: rect1;
+}
+#event-rect2 {
+  grid-area: rect2;
+}
+#event-sqaure {
+  grid-area: square;
+}
+#event-rect1-image {
+  background: url(./assets/img/event-01.jpg) center/cover;
+}
+#event-rect2-image {
+  background: url(./assets/img/event-02.jpg) center/cover;
+}
+#event-square-image {
+  background: url(./assets/img/event-03.jpg) center/cover;
 }
 
 /************************* IDs specs *************************/
