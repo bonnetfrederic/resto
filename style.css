@@ -429,6 +429,7 @@ header nav {
 }
 .foot2-content {
   position: relative;
+  margin-top: 40px;
 }
 
 /************************* classes specs *************************/
@@ -558,6 +559,23 @@ header nav {
   line-height: 25px;
   padding-top: 10px;
 }
+.foot h4 {
+  color: var(--lightgrey);
+  font-family: var(--ff-poppins);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+.foot1 h5 {
+  font-family: var(--ff-roboto);
+  border: 1px solid var(--lightgrey);
+  margin: 15px 0 40px 2px;
+  height: 30px;
+  width: 50%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 10px;
+}
 .foot2-content ul {
   width: 200px;
   display: flex;
@@ -565,8 +583,8 @@ header nav {
   justify-content: space-around;
   align-items: center;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 2px;
+  right: 30%;
 }
 
 /************************* IDs *************************/
