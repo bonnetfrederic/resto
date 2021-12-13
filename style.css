@@ -1,22 +1,22 @@
 /************************* imports *************************/
 @font-face {
-  font-family: 'Allura';
+  font-family: "Allura";
   src: url(./assets/fonts/Allura-Regular.ttf);
 }
 @font-face {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   src: url(./assets/fonts/Poppins-Medium.ttf);
 }
 @font-face {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   src: url(./assets/fonts/Roboto-Light.ttf);
 }
 
 /************************* general *************************/
 :root {
-  --ff-allura: 'Allura', cursive;
-  --ff-poppins: 'Poppins', sans-serif;
-  --ff-roboto: 'Roboto', sans-serif;
+  --ff-allura: "Allura", cursive;
+  --ff-poppins: "Poppins", sans-serif;
+  --ff-roboto: "Roboto", sans-serif;
   --white: #eeeeee;
   --cafe: #a67245;
   --lightgrey: #bababc;
@@ -42,9 +42,7 @@ footer {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 1fr;
-  grid-template-areas: 
-    "laius foot"
-  ;
+  grid-template-areas: "laius foot";
 }
 
 /************************* general specs *************************/
@@ -66,6 +64,8 @@ header nav {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  grid-area: logos;
+  margin: 30px auto;
 }
 .discover {
   min-height: 900px;
@@ -105,48 +105,46 @@ header nav {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: repeat(4, 140px);
-  grid-template-areas: 
+  grid-template-areas:
     "meal1 meal2"
     "meal3 meal4"
     "meal5 meal6"
-    "meal7 meal8"
-  ;
+    "meal7 meal8";
 }
 .meal {
   height: 100px;
   width: 80%;
   display: grid;
-  grid-template-columns: 30% 60% 10%;
+  grid-template-columns: 25% 65% 10%;
   grid-template-rows: 1fr;
-  grid-template-areas: 
-    "img txt price"
-  ;
-  border-bottom: 1px solid var(--lightgrey);
+  grid-template-areas: "img txt price";
+  border-bottom: 1px dashed var(--lightgrey);
   margin: auto;
 }
 .meal-img {
   grid-area: img;
-  height: 90px;
-  width: 90px;
+  height: 70px;
+  width: 70px;
   margin: auto 0;
 }
 .meal-description {
   grid-area: txt;
   text-align: left;
   margin: auto 0;
-  padding: 0 2px;
+  padding: 0 3% 0 20%;
 }
 .meal-title {
-  font-family: var(--ff-poppins);
+  font-family: var(--ff-roboto);
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   margin-bottom: 5px;
+  /* letter-spacing: 1px; */
 }
 .meal-ingredients {
   font-family: var(--ff-roboto);
-  font-size: 1rem;
-  font-weight: lighter;
+  font-size: 0.9rem;
+  font-weight: 100;
   color: var(--darkgrey);
 }
 .meal-price {
@@ -157,13 +155,10 @@ header nav {
   font-weight: 600;
 }
 .booking {
-  /* margin-top: 200px; */
   display: grid;
   grid-template-columns: 30% 70%;
   grid-template-rows: 1fr;
-  grid-template-areas: 
-    "hours resa"
-  ;
+  grid-template-areas: "hours resa";
   background: var(--white);
   height: 600px;
   width: 70%;
@@ -209,19 +204,20 @@ header nav {
 }
 .booking-res {
   grid-area: resa;
-  padding: 60px 30px;
+  padding: 60px 5px;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 100%; /* pour forcer la width fu form à 100% de sa div parent */
   grid-template-rows: 100px 70px 300px;
-  grid-template-areas: 
+  grid-template-areas:
     "title"
     "picto"
-    "form"
-  ;
+    "form";
 }
 .booking-res-title {
+  width: 60%;
   text-align: center;
   line-height: 30px;
+  margin: 0 auto;
 }
 .booking-res-title-l1 {
   font-family: var(--ff-allura);
@@ -240,6 +236,10 @@ header nav {
   height: 35px;
   width: 35px;
   color: var(--lightgrey);
+  margin: 0 auto;
+}
+.booking-res-form {
+  width: 80%;
   margin: 0 auto;
 }
 .our-event {
@@ -275,19 +275,16 @@ header nav {
   display: grid;
   grid-template-columns: 60% 40%;
   grid-template-rows: 50% 50%;
-  grid-template-areas: 
+  grid-template-areas:
     "rect1 square"
-    "rect2 square"
-  ;
+    "rect2 square";
   gap: 20px;
 }
 .event-landscape {
   display: grid;
   grid-template-columns: 40% 60%;
   grid-template-rows: 1fr;
-  grid-template-areas: 
-    "img txt"
-  ;
+  grid-template-areas: "img txt";
   position: relative;
 }
 .event-image {
@@ -318,7 +315,6 @@ header nav {
 .event-square {
   grid-area: square;
   background: url(./assets/img/event-03.jpg) center/cover;
-
 }
 .event-square-text {
   background: var(--white);
@@ -411,25 +407,23 @@ header nav {
 }
 .foot {
   grid-area: foot;
-  padding: 10% 33% 10% 5%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 50% 50%;
-  grid-template-areas: 
-    "foot1"
-    "foot2"
-  ;
+  padding: 10% 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
   color: #818181;
 }
-.foot1 {
-  grid-area: foot1;
-}
 .foot2 {
-  grid-area: foot2;
+  min-height: 100px;
 }
 .foot2-content {
-  position: relative;
   margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 /************************* classes specs *************************/
@@ -468,10 +462,10 @@ header nav {
   left: 0%;
 }
 .meal img {
-  height: 80px;
-  width: 80px;
-  background-size: 80px;
-  border-radius: 100%;
+  height: 70px;
+  width: 70px;
+  background-size: 70px;
+  border-radius: 50%;
   overflow: hidden;
   margin: 0 auto;
   display: flex;
@@ -479,19 +473,18 @@ header nav {
   align-items: center;
 }
 .booking-res-form form {
-  padding: 0 20px;
   height: 320px;
   display: grid;
   grid-template-columns: repeat(3, 30%);
   grid-template-rows: 25% 25% 50%;
-  grid-template-areas: 
+  grid-template-areas:
     "people date time"
     "name phone email"
-    "btn btn btn"
-    ;
-  gap: 2px 5%;
+    "btn btn btn";
+  gap: 2px 3%;
 }
-.booking-res-form select, .booking-res-form input {
+.booking-res-form select,
+.booking-res-form input {
   height: 50px;
   margin: auto 0;
   border: none;
@@ -511,16 +504,17 @@ header nav {
   text-transform: uppercase;
   font-size: 2rem;
 }
-.event-text h3, .event-square-text h3 {
+.event-text h3,
+.event-square-text h3 {
   color: var(--darkgrey);
   font-family: var(--ff-poppins);
   font-size: 1.5rem;
   font-weight: lighter;
   letter-spacing: 2px;
   padding-left: 10px;
-
 }
-.event-text h5, .event-square-text h5 {
+.event-text h5,
+.event-square-text h5 {
   color: var(--lightgrey);
   font-family: var(--ff-roboto);
   font-size: 1rem;
@@ -531,7 +525,8 @@ header nav {
   padding: 0 10px;
   line-height: 40px;
 }
-.event-text h4, .event-square-text h4 {
+.event-text h4,
+.event-square-text h4 {
   font-family: var(--ff-roboto);
   color: var(--darkgrey);
   font-weight: 600;
@@ -580,11 +575,8 @@ header nav {
   width: 200px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content:space-around;
   align-items: center;
-  position: absolute;
-  top: 2px;
-  right: 30%;
 }
 
 /************************* IDs *************************/
@@ -593,13 +585,11 @@ header nav {
   padding-top: 40px;
   width: 80%;
   display: grid;
-  grid-template-columns: 15% 85%;
+  grid-template-columns: 15% 65% 20%;
   grid-template-rows: 1fr;
-  grid-template-areas: 
-  "logo nav"
-  ;
+  grid-template-areas: "logo nav logos";
   margin: 0 10%;
-  color: white;
+  /* color: white; */
 }
 #navbar-logo {
   font-family: var(--ff-allura);
@@ -612,7 +602,7 @@ header nav {
 }
 #welcome-container {
   height: 280px;
-  width: 50%;
+  width: 100%;
   margin: 100px auto;
 }
 #welcome {
@@ -653,8 +643,8 @@ header nav {
   text-transform: uppercase;
   color: var(--lightgrey);
   font-family: var(--ff-roboto), sans-serif;
-  font-size: 1.3rem;
-  letter-spacing: 2px;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
   text-align: center;
 }
 #our-store {
@@ -662,9 +652,7 @@ header nav {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 1fr;
-  grid-template-areas: 
-    "card img"
-  ;
+  grid-template-areas: "card img";
 }
 #our-store-card-container {
   margin: auto 0;
@@ -830,7 +818,7 @@ header nav {
   font-weight: 600;
   font-size: 1.5rem;
   width: 240px;
-  margin: 40px auto 0 auto;
+  margin: 40px auto 0;
 }
 #event-rect1 {
   grid-area: rect1;
@@ -857,3 +845,212 @@ header nav {
 }
 
 /************************* @media *************************/
+@media (max-width: 1300px) {
+  .nav-menu {
+    display: none;
+  }
+  .nav-logos {
+    min-width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: logos;
+    margin: 30px auto;
+  }
+  #navbar {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 15% 45% 40%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "logo nav logos";
+  }
+  #welcome-container {
+    width: 60%;
+  }
+  #welcome-text {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .booking {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+      "hours"
+      "resa";
+    height: 1300px;
+    width: 90%;
+    margin: 200px auto 50px auto;
+  }
+  .booking-res {
+    height: 520px;
+  }
+  .booking-res-form form {
+    height: 320px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 25% 25% 25% 50%;
+    grid-template-areas:
+      "people date"
+      "time name"
+      "phone email"
+      "btn btn";
+    gap: 2px 3%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .discover {
+      min-height: 1100px;
+      width: 50%;
+      margin: 0 auto;
+  }
+  .meals {
+    height: 810px;
+    background: #fbfaf6;
+    margin-top: 40px;
+    padding: 0px 5px 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 100px);
+    grid-template-areas:
+      "meal1"
+      "meal2"
+      "meal3"
+      "meal4"
+      "meal5"
+      "meal6"
+      "meal7"
+      "meal8";
+  }
+  .meal {
+    height: 100px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 25% 65% 10%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "img txt price";
+    border-bottom: 1px dashed var(--lightgrey);
+    margin: auto;
+  }
+  .meal-img {
+    grid-area: img;
+    height: 70px;
+    width: 70px;
+    margin: auto 0;
+  }
+  .meal-description {
+    grid-area: txt;
+    text-align: left;
+    margin: auto 0;
+    padding: 0 3% 0 5%;
+  }
+  .meal-title {
+    font-family: var(--ff-roboto);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.7rem;
+    margin-bottom: 5px;
+    /* letter-spacing: 1px; */
+  }
+  .meal-ingredients {
+    font-family: var(--ff-roboto);
+    font-size: 0.9rem;
+    font-weight: 100;
+    color: var(--darkgrey);
+  }
+  .meal-price {
+    grid-area: price;
+    margin: auto;
+    color: var(--cafe);
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  .booking {
+    margin: 150px auto 50px auto;
+  }
+  #welcome-container {
+    margin: 100px 20%;
+  }
+  #welcome-text {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 900px) {
+  .our-event {
+    display: none;
+  }
+  #middle {
+    min-height: 2500px;
+  }
+  .ceo-message {
+    background: var(--white);
+    width: 90%;
+    margin: 100px auto -50px;
+    height: 450px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 10%;
+  }
+  .laius {
+    padding: 10% 5%;
+  }
+}
+
+@media (max-width: 800px) {
+  #our-store {
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas:
+    "card"
+    "img"
+    ;
+  }
+  #our-store-card-container {
+    height: 500px;
+  }
+  #our-store-image {
+    display: none;
+  }
+  #welcome-container {
+    width: 100%;
+    margin: 100px auto;
+  }
+  .discover {
+    min-height: 1100px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .foot2-content {
+    margin-top: 20px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .foot2-content ul {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 600px) {
+  #welcome-title-l1 {
+    font-size: 3.2rem;
+  }
+  #welcome-title-l2 {
+    font-size: 2.5rem;
+  }
+}
