@@ -109,6 +109,10 @@ input[type="submit"]:hover,
 .div-header-nav {
   width: 100%;
 }
+.discover {
+  position: relative;
+  z-index: 1;
+}
 .meals {
   border-top: 4px solid var(--cafe);
   min-height: 580px;
@@ -123,6 +127,7 @@ input[type="submit"]:hover,
     "meal3 meal4"
     "meal5 meal6"
     "meal7 meal8";
+  z-index: 1;
 }
 .meal {
   font-family: var(--ff-roboto);
@@ -476,6 +481,15 @@ input[type="submit"]:hover,
   top: 130%;
   left: 0%;
 }
+.discover::before {
+  content: "";
+  position: absolute;
+  height: 600px;
+  width: 100vw;
+  background: url(./assets/img/bg-menu-01.jpg) center/cover;
+  transform: translate(-25%, 350px);
+  z-index: -1;
+}
 .meal img {
   height: 60px;
   width: 60px;
@@ -750,14 +764,8 @@ input[type="submit"]:hover,
 #middle {
   background: var(--darkgrey);
   min-height: 3000px;
+  z-index: -2;
 }
-/* #background-slider {
-  background: url(./assets/img/bg-menu-01.jpg) center/cover;
-  height: 600px;
-  width: 100%;
-  position: absolute;
-  top: 1800px;
-} */
 #meal1 {
   grid-area: meal1;
 }
@@ -1054,6 +1062,9 @@ input[type="submit"]:hover,
     min-height: 1100px;
     width: 80%;
     margin: 0 auto;
+  }
+  .discover::before {
+    transform: translate(-10%, 550px);
   }
   .foot2-content {
     margin-top: 20px;
