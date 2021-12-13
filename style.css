@@ -485,7 +485,8 @@ input[type="submit"]:hover,
   content: "";
   position: absolute;
   height: 600px;
-  width: 100vw;
+  width: 98vw;
+  overflow: hidden;
   background: url(./assets/img/bg-menu-01.jpg) center/cover;
   transform: translate(-25%, 350px);
   z-index: -1;
@@ -1124,5 +1125,28 @@ input[type="submit"]:hover,
   }
   #our-store-card-author-l2 {
     font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .div-header-nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-family: var(--ff-poppins);
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 100;
+    flex-wrap: wrap;
+  }
+  .meal-description {
+    padding: 0 10px 0 15px;
+  }
+  .meal-title {
+    font-size: 0.5rem;
+  }
+  .meal-ingredients {
+    font-size: 0.7rem;
   }
 }
