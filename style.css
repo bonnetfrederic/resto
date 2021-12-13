@@ -52,6 +52,7 @@ header nav {
 
 /************************* classes *************************/
 .nav-menu {
+  font-family: var(--ff-roboto);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -98,7 +99,8 @@ header nav {
   width: 100%;
 }
 .meals {
-  height: 550px;
+  border-top: 4px solid var(--cafe);
+  min-height: 580px;
   background: #fbfaf6;
   margin-top: 40px;
   padding: 0px 5px 10px;
@@ -112,7 +114,8 @@ header nav {
     "meal7 meal8";
 }
 .meal {
-  height: 100px;
+  font-family: var(--ff-roboto);
+  height: 100%;
   width: 80%;
   display: grid;
   grid-template-columns: 25% 65% 10%;
@@ -123,15 +126,18 @@ header nav {
 }
 .meal-img {
   grid-area: img;
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
   margin: auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .meal-description {
   grid-area: txt;
   text-align: left;
   margin: auto 0;
-  padding: 0 3% 0 20%;
+  padding: 0 3px 0 20%;
 }
 .meal-title {
   font-family: var(--ff-roboto);
@@ -162,7 +168,7 @@ header nav {
   background: var(--white);
   height: 600px;
   width: 70%;
-  margin: 300px auto 50px auto;
+  margin: 180px auto 50px auto;
 }
 .booking-container {
   grid-area: hours;
@@ -348,8 +354,8 @@ header nav {
 .ceo-message {
   background: var(--white);
   width: 65%;
-  margin: 100px auto 0px;
-  height: 350px;
+  margin: 100px auto -50px;
+  height: 400px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -460,9 +466,9 @@ header nav {
   left: 0%;
 }
 .meal img {
-  height: 70px;
-  width: 70px;
-  background-size: 70px;
+  height: 60px;
+  width: 60px;
+  background-size: 60px;
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto;
@@ -510,6 +516,7 @@ header nav {
   font-weight: lighter;
   letter-spacing: 2px;
   padding-left: 10px;
+  padding-right: 10px;
 }
 .event-text h5,
 .event-square-text h5 {
@@ -732,17 +739,14 @@ header nav {
 #middle {
   background: var(--darkgrey);
   min-height: 3000px;
-  z-index: -1;
-  position: relative;
 }
-#background-slider {
+/* #background-slider {
   background: url(./assets/img/bg-menu-01.jpg) center/cover;
   height: 600px;
   width: 100%;
-  z-index: -1;
   position: absolute;
-  top: 400px;
-}
+  top: 1800px;
+} */
 #meal1 {
   grid-area: meal1;
 }
@@ -817,6 +821,7 @@ header nav {
   font-size: 1.5rem;
   width: 240px;
   margin: 40px auto 0;
+  letter-spacing: 3px;
 }
 #event-rect1 {
   grid-area: rect1;
@@ -835,6 +840,15 @@ header nav {
 }
 #event-square-image {
   background: url(./assets/img/event-03.jpg) center/cover;
+}
+#news-email {
+  background: none;
+  border: 1px solid #666666;
+  color: #666666;
+  width: 45%;
+  height: 30px;
+  margin-top: 10px;
+  padding-left: 15px;
 }
 
 /************************* IDs specs *************************/
@@ -1045,10 +1059,48 @@ header nav {
 }
 
 @media (max-width: 600px) {
+  .ceo-message {
+    margin: 100px auto -100px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+  }
   #welcome-title-l1 {
     font-size: 3.2rem;
   }
   #welcome-title-l2 {
     font-size: 2.5rem;
+  }
+  #our-store-card-title-l1 {
+    font-size: 2.6rem;
+  }
+  #our-store-card-title-l2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  #our-store-card-picto {
+    background: url(./assets/img/ic-plate.png) center;
+    background-size: 30px;
+    height: 30px;
+    width: 30px;
+    color: var(--lightgrey);
+  }
+  #our-store-card-text {
+    font-size: 1.2rem;
+  }
+  #our-store-card-avatar {
+    height: 70px;
+    width: 70px;
+    background-size: 70px;
+  }
+  #our-store-card-author-l1 {
+    font-size: 1.3rem;
+  }
+  #our-store-card-author-l2 {
+    font-size: 0.8rem;
   }
 }
