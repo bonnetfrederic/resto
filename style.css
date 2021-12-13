@@ -376,14 +376,12 @@ header nav {
   line-height: 30px;
 }
 .fa-quote-left {
-  position: absolute;
-  top: -3px;
-  left: 15px;
+  transform: translateY(-5px);
+  margin: 0 10px;
 }
 .fa-quote-right {
-  position: absolute;
-  bottom: 17px;
-  right: 20%;
+  transform: translateY(-5px);
+  margin: 0 10px;
 }
 .author {
   font-family: var(--ff-poppins);
@@ -540,7 +538,7 @@ header nav {
   padding-top: 50px;
 }
 .citation p {
-  position: relative;
+  display: inline-block;
 }
 .laius h3 {
   font-family: var(--ff-allura);
