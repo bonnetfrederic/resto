@@ -36,6 +36,10 @@ header {
 li {
   list-style: none;
 }
+a {
+  text-decoration: none;
+  color: var(--lightgrey);
+}
 footer {
   background: url(./assets/img/bg-footer.jpg) center/cover;
   min-height: 250px;
@@ -48,6 +52,13 @@ footer {
 /************************* general specs *************************/
 header nav {
   grid-area: nav;
+}
+li:hover,
+input[type="submit"]:hover,
+.our-event-events h4:hover,
+.meal:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 /************************* classes *************************/
