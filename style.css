@@ -83,6 +83,7 @@ input[type="submit"]:hover,
   min-height: 900px;
   width: 50%;
   margin: 0 auto;
+  
 }
 .div-header {
   padding-top: 70px;
@@ -128,6 +129,7 @@ input[type="submit"]:hover,
     "meal5 meal6"
     "meal7 meal8";
   z-index: 1;
+  transition: 1s ease;
 }
 .meal {
   font-family: var(--ff-roboto);
@@ -139,6 +141,7 @@ input[type="submit"]:hover,
   grid-template-areas: "img txt price";
   border-bottom: 1px dashed var(--lightgrey);
   margin: auto;
+
 }
 .meal-img {
   grid-area: img;
@@ -1038,6 +1041,13 @@ input[type="submit"]:hover,
   }
 }
 
+@media (max-width: 815px) {
+  .discover::before {
+    width: 96vw;
+    transform: translate(-25%, 350px);
+}
+}
+
 @media (max-width: 800px) {
   #our-store {
     height: 500px;
@@ -1092,6 +1102,9 @@ input[type="submit"]:hover,
     align-items: center;
     padding: 40px 20px;
   }
+  .foot2-content ul {
+    max-width: 150px;
+  }
   #welcome-title-l1 {
     font-size: 3.2rem;
   }
@@ -1128,7 +1141,7 @@ input[type="submit"]:hover,
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 410px) {
   .div-header-nav ul {
     display: flex;
     flex-direction: row;
@@ -1140,6 +1153,10 @@ input[type="submit"]:hover,
     font-weight: 100;
     flex-wrap: wrap;
   }
+  .discover::before {
+    width: 95vw;
+    transform: translate(-10%, 550px);
+  }
   .meal-description {
     padding: 0 10px 0 15px;
   }
@@ -1148,5 +1165,8 @@ input[type="submit"]:hover,
   }
   .meal-ingredients {
     font-size: 0.7rem;
+  }
+  .foot2-content ul {
+    max-width: 100px;
   }
 }
