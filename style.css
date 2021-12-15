@@ -873,6 +873,12 @@ input[type="submit"]:hover,
   margin-top: 10px;
   padding-left: 15px;
 }
+#news-email:focus {
+  outline: 1px solid rgba(204, 204, 204, 0.323);
+}
+#news-email:focus::placeholder {
+  color: transparent;
+}
 
 /************************* IDs specs *************************/
 #navbar nav {
