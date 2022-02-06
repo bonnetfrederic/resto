@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resto</title>
+  <meta name="description" content="Bienvenue sur notre nouveau site Internet. Notre restaurant vous accueille avec sa nouvelle carte remise au goût du jour. Nous nous efforçons de vous proposer des plats innovants aux saveurs originales. Alors n'attendez plus!">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
@@ -19,20 +20,20 @@
       <div id="navbar-logo">Resto</div>
       <nav>
         <ul class="nav-menu">
-          <li><a href="">Home</a></li>
-          <li><a href="">Réservations</a></li>
-          <li><a href="">Menu</a></li>
-          <li><a href="">Blog</a></li>
-          <li><a href="">Pages</a></li>
-          <li><a href="">Shop</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Réservations</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Pages</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
       </nav>
       <div>
         <ul class="nav-logos">
-          <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href=""><i class="fab fa-twitter"></i></a></li>
-          <li><a href=""><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
         </ul>
       </div>
     </div>
@@ -78,18 +79,18 @@
           <div class="div-header-picto"></div>
           <div class="div-header-nav">
             <ul>
-              <li><a href="">Breakfast</a></li>
-              <li><a href="">Lunch</a></li>
-              <li><a href="">Dinner</a></li>
-              <li><a href="">Drinks</a></li>
-              <li><a href="">Other</a></li>
+              <li><a href="#">Breakfast</a></li>
+              <li><a href="#">Lunch</a></li>
+              <li><a href="#">Dinner</a></li>
+              <li><a href="#">Drinks</a></li>
+              <li><a href="#">Other</a></li>
             </ul>
           </div>
         </div>
         <div class="meals">
           <div id="meal1" class="meal">
             <div class="meal-img">
-              <img src="./assets/img/dish-item-01.jpg" alt="">
+              <img src="./assets/img/dish-item-01.jpg" alt="image plat n°1">
             </div>
             <div class="meal-description">
               <div class="meal-title">
@@ -241,17 +242,23 @@
               <select name="who" id="booking-people" required>
                 <option value="People">People</option>
               </select>
+              <label for="booking-date" style="display: none" aria-label="Date"></label>
               <input 
                 type="date" id="booking-date"
                 value="2020-07-15"
                 min="2020-07-15" max="2022-12-31" 
                 required>
+              <label for="booking-time" style="display: none" aria-label="Time"></label>
               <input 
                 type="time" id="booking-time"
                 min="07:00" max="23:00" required>
+              <label for="booking-name" style="display: none" aria-label="Name"></label>
               <input type="text" id="booking-name" placeholder="Name" required autocomplete="off">
+              <label for="booking-phone" style="display: none"  aria-label="Phone"></label>
               <input type="text" id="booking-phone" placeholder="Phone" required autocomplete="off">
+              <label for="booking-email" style="display: none" aria-label="Email"></label>
               <input type="text" id="booking-email" placeholder="Email" required autocomplete="off">
+              <label for="booking-button" style="display: none" aria-label="Submit"></label>
               <input type="submit" id="booking-button" value="BOOK NOW">
             </form>
           </div>
@@ -264,6 +271,8 @@
         </div>
         <div class="our-event-picto"></div>
         <div class="our-event-events">
+          <h1 style="display: none;">Resto</h1>
+          <h2 style="display: none;">Welcome to the 'Resto'</h2>
           <div id="event-rect1" class="event-landscape">
             <div>
               <div id="event-rect1-image" class="event-image"></div>
@@ -271,11 +280,17 @@
             </div>
             <div id="event-rect1-text" class="event-text">
               <h3>Night Inspirescu Party</h3>
+              <h4 style="display: none;"></h4>
               <h5 class="loc&hours">
-                <span><i class="fas fa-map-marker-alt"></i>Restaurant Resto</span>
-                <span><i class="far fa-clock"></i>10:00pm - 06:00am</span>
+                <span>
+                  <i class="fas fa-map-marker-alt">
+                  </i>Restaurant Resto
+                </span>
+                <span>
+                  <i class="far fa-clock"></i>10:00pm - 06:00am
+                </span>
               </h5></i>
-              <h4>BUY TICKETS</h4>
+              <h6>BUY TICKETS</h6>
             </div>
           </div>
           <div id="event-rect2" class="event-landscape">
@@ -285,11 +300,12 @@
             </div>
             <div id="event-rect2-text" class="event-text">
               <h3>DJ RobagRhume</h3>
+              <h4 style="display: none;"></h4>
               <h5 class="loc&hours">
                 <span><i class="fas fa-map-marker-alt"></i>Restaurant Resto</span>
                 <span><i class="far fa-clock"></i>10:00pm - 06:00am</span>
               </h5>
-              <h4>BUY TICKETS</h4>
+              <h6>BUY TICKETS</h6>
             </div>
           </div>
           <div id="event-square" class="event-square">
@@ -300,12 +316,13 @@
               <div>
                 <div class="event-square-text-daysquare"><p>08 July</p></div>
                 <h3>Thousands celebrities at Johnnie Night</h3>
+                <h4 style="display: none;"></h4>
               </div>
               <h5 class="loc&hours">
                 <span><i class="fas fa-map-marker-alt"></i>Restaurant Resto</span>
                 <span><i class="far fa-clock"></i>10:00pm - 06:00am</span>
               </h5>
-              <h4>BUY TICKETS</h4>
+              <h6>BUY TICKETS</h6>
             </div>
           </div>
         </div>

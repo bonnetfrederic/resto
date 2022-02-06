@@ -559,18 +559,18 @@ input[type="submit"]:hover,
   padding: 0 10px;
   line-height: 40px;
 }
-.event-text h4,
-.event-square-text h4 {
+.event-text h6,
+.event-square-text h6 {
   font-family: var(--ff-roboto);
   color: var(--darkgrey);
   font-weight: 600;
   font-size: 0.9rem;
   padding-left: 5px;
 }
-.event-text h4 {
+.event-text h6 {
   margin-top: 30px;
 }
-.event-square-text h4 {
+.event-square-text h6 {
   padding-top: 50px;
 }
 .citation p {
